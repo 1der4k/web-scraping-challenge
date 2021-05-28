@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup as bs
 from webdriver_manager.chrome import ChromeDriverManager
 import pandas as pd
 
-def scrape():
+def mars_scraper():
     browser = Browser('chrome',executable_path = "C:/Users/19105/ChromeDriver",headless=False)
     
     # NASA Mars News

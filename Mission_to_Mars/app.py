@@ -1,7 +1,7 @@
 # dependencies
 from flask import Flask,jsonify,render_template
 from flask_pymongo import PyMongo
-from scrape_mars import scrape
+from scrape_mars import mars_scraper
 
 # create flask app
 app = Flask(__name__)
@@ -16,7 +16,7 @@ def home():
 
 @app.route('/scrape')
 def scrape():
-    post = scrape()
+    post = mars_scraper()
     db.post.update({}, post, upsert=True)
 
 if __name__ == "__main__":

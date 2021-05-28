@@ -1,6 +1,6 @@
 # dependencies
 from flask import Flask,jsonify,render_template
-from flask pymongo import PyMongo
+from flask_pymongo import PyMongo
 from scrape_mars import scrape
 
 # create flask app

@@ -11,8 +11,13 @@ db = mongo.db
 
 @app.route('/')
 def home():
-    post = mars_data_dict
+    post = db.posts.find_one()
     return render_template('index.html', post = post)
 
 @app.route('/scrape')
 def scrape():
+    post = scrape()
+    db.post.update({}, post, upsert=True)
+
+if __name__ == "__main__":
+    app.run(debug=True)

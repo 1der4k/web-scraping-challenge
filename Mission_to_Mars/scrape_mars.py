@@ -13,8 +13,12 @@ def mars_scraper():
     html = browser.html
     soup = bs(html, "html.parser")
 
-    news_title = soup.find('div', class_ = "content_title")
-    news_teaser = soup.find('div', class_ = "article_teaser_body")
+    raw_news_title = soup.find('div', class_ = "content_title")
+    raw_news_teaser = soup.find('div', class_ = "article_teaser_body")
+
+    news_title = raw_news_title.text
+    news_teaser = raw_news_teaser.text
+
 
     # JPL Mars Space Images
     url = "https://spaceimages-mars.com/"

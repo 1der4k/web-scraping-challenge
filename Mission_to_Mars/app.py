@@ -1,5 +1,5 @@
 # dependencies
-from flask import Flask,jsonify,render_template
+from flask import Flask,jsonify,render_template,redirect
 from flask_pymongo import PyMongo
 from scrape_mars import mars_scraper
 
@@ -19,7 +19,7 @@ def scrape():
     post = mars_scraper()
     db.post.update({}, post, upsert=True)
 
-    return jsonify(post)
+    return redirect ('/', code=302)
 
 if __name__ == "__main__":
     app.run(debug=True)

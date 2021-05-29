@@ -5,7 +5,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 import pandas as pd
 
 def mars_scraper():
-    browser = Browser('chrome',executable_path = "C:/Users/19105/ChromeDriver",headless=False)
+    browser = Browser('chrome',executable_path = "C:/Users/19105/ChromeDriver",headless=True)
     
     # NASA Mars News
     browser.visit("https://redplanetscience.com/")

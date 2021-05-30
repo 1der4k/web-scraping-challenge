@@ -30,5 +30,24 @@
             <h5>{{ post.mars_news_title }}</h5>
             <p>{{ post.mars_news_teaser }}</p>
         </div>
+        <div class = "row">
+            <div class = "col bg-white text-left m-5 p-5 rounded">
+                <img src= {{ post.featured_img }} class = "img-fluid">
+            </div>
+            <div class = "col bg-white text-left m-5 p-5 rounded">
+                {{ post.mars_facts | safe}}
+            </div>
+        </div>
+        <div class = "row bg-white text-left m-5 p-5 rounded">
+            
+            {% for item in post.mars_hemispheres%}
+
+                <div class = "col">
+                    <img src = {{ item.img_url }} class = "img-fluid" >
+                </div>
+            
+            {% endfor %}
+            
+        </div>
     </body>
 <html>

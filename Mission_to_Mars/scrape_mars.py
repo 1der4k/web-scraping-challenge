@@ -106,9 +106,8 @@ def mars_scraper():
         loop += 1
 
     mars_data_dict = {
-        "mars_news" : {
-            news_title : news_teaser
-        },
+        "mars_news_title" : news_title,
+        "mars_news_teaser": news_teaser,
         "featured_img" : img_url,
         "mars_facts" : scrape_facts_html,
         "mars_hemispheres" : mars_hemi_dict

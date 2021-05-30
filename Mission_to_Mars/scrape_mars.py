@@ -64,8 +64,6 @@ def mars_scraper():
     h3 = collapsible.find_all("h3")
     for item in h3:
         h3_clean.append(item.text.strip())
-        
-    h3_clean
 
     full_url_list = []
 
@@ -79,10 +77,8 @@ def mars_scraper():
         
         img_anchor = downloads.find("a")
         href = img_anchor['href']
-        #href
         
         full_url = url + href
-        #full_url
         
         full_url_list.append(full_url)
         
